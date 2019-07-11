@@ -8,5 +8,14 @@ module.exports = {
     },
     getOne(id){
         return knex(tableName).where('id',id).first()
+    },
+    create(sticker){
+        return knex(tableName).insert(sticker);
+    },
+    update(id,sticker){
+        return knex(tableName).where('id',id).update(sticker)
+    },
+    delete(id){
+        return knex(tableName).where('id',id).del()
     }
 };
