@@ -20,7 +20,7 @@ describe('CRUD Stickers', () => {
 
     it('Lists All Records', function (done) {
         request(app)
-            .get('/api')
+            .get('/api/stickers')
             .set('Accept', 'application/json')
             .expect('Content-Type', /json/)
             .expect(200)
